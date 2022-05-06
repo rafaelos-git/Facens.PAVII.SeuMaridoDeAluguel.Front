@@ -19,12 +19,11 @@ import { AntDesign, Ionicons } from '@expo/vector-icons'
 import axios from 'axios'
 
 import colors from '../styles/colors'
-// import fonts from '../styles/fonts'
-import api from '../services/api';
+import fonts from '../styles/fonts'
+import userAuth from '../utils/login'
 
 import loginImage from '../assets/login.png'
 import { Home } from './Home'
-import fonts from '../styles/fonts'
 
 export function Auth() {
     const navigation = useNavigation()
@@ -34,7 +33,6 @@ export function Auth() {
     const [isFilledPassword, setIsFilledPassword] = useState(false)
     const [email, setEmail] = useState<string>()
     const [password, setPassword] = useState<string>()
-    const [login, setLogin] = useState([])
     const [secure, setSecure] = useState(true)
 
     function handleInputBlur(name: string) {
@@ -64,23 +62,13 @@ export function Auth() {
         setPassword(value)
     }
 
-    async function signin() {
-        try{
-            const response = await api.post('/login', {
-                email,
-                password
-            })
-
-            let nivelAcesso = response.data.user.acess_level
-    
-            setLogin(response.data.user)
-            console.log(nivelAcesso)
-
-            AsyncStorage.setItem('loginInfo', JSON.stringify(nivelAcesso))
-            
-            axios.defaults.headers.common['Authorization'] = response.data.token
-
-            navigation.navigate('Home' as never)
+    function signin() {
+        try{            
+            if (email == userAuth.email && password == userAuth.password) {
+                navigation.navigate('Home' as never)
+            } else {
+                Alert.alert('Ops! Ocorreu um Problema!', 'Usuário ou senha incorretos!')
+            }
         } catch(err){
             Alert.alert('Ops! Ocorreu um Problema!', 'Usuário ou senha incorretos!')
         }
