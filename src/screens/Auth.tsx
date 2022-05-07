@@ -20,7 +20,7 @@ import axios from 'axios'
 
 import colors from '../styles/colors'
 import fonts from '../styles/fonts'
-import userAuth from '../utils/login'
+import userAuth from '../utils/loginInfo'
 
 import loginImage from '../assets/login.png'
 import { Home } from './Home'

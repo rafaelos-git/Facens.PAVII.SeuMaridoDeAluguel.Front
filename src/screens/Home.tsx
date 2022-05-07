@@ -5,7 +5,6 @@ import MapView, {Marker, Callout} from 'react-native-maps';
 import { requestForegroundPermissionsAsync, getCurrentPositionAsync } from 'expo-location'
 import { useNavigation } from '@react-navigation/native';
 
-import { connect, disconnect, subscribeToNewDevs   } from '../services/socket'
 import workersCadastred from '../utils/workers'
 
 export function Home (){
@@ -37,22 +36,11 @@ export function Home (){
         loadInitialPosition()
     }, [])
 
-    function setupWebsocket(){
-        disconnect(); 
-        // Será executado assim que clicar no botão de busca, para capturar os novos devs cadastrados 
-        //@ts-ignore
-        const  { latitude, longitude } = currentRegion;
-    
-        connect(
-            latitude,
-            longitude,
-            skills
-        );
-    }
+    useEffect(() => {
+        loadWorkers()
+    }, [])
 
-    async function loadWorkers(){
-        //@ts-ignore
-        const { latitude, longitude } = currentRegion;
+    function loadWorkers(){
         const searchedSkillsWorker: any = []
 
         workersCadastred.map((item, index) => {
@@ -64,7 +52,7 @@ export function Home (){
         Keyboard.dismiss()
     
         setWorkers(searchedSkillsWorker as never)
-        setupWebsocket();
+        //setupWebsocket();
     }
     
     function handleRegionChanged(region: any) {
@@ -93,6 +81,7 @@ export function Home (){
                         }}>
                         {/* <Image
                             style={styles.avatar}
+                            //@ts-ignore
                             source={{ uri:worker.avatar_url }}
                         /> */}
                         
@@ -107,7 +96,7 @@ export function Home (){
                             {/* @ts-ignore */}
                             <Text style={styles.devBio}>{worker.bio}</Text>
                             {/* @ts-ignore */}
-                            <Text style={styles.devTechs}>{worker.skills.join(', ')}</Text>
+                            <Text style={styles.devTechs}>{worker.skills}</Text>
                             </View>
                         </Callout>
                     </Marker>
