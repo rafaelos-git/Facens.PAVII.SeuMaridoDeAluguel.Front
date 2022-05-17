@@ -79,11 +79,11 @@ export function Home (){
                             //@ts-ignore
                             latitude:worker.location.coordinates[1]
                         }}>
-                        {/* <Image
+                        <Image
                             style={styles.avatar}
                             //@ts-ignore
-                            source={{ uri:worker.avatar_url }}
-                        /> */}
+                            source={worker.avatar_url}
+                        />
                         
                         <Callout onPress={() => {
                             // Navegação
