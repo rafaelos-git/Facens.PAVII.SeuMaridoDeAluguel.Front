@@ -85,10 +85,11 @@ export function Home (){
                             source={worker.avatar_url}
                         />
                         
-                        <Callout onPress={() => {
+                        <Callout style={styles.callout} onPress={() => {
                             // Navegação
-                            navigation.navigate('Profile' as never)
-
+                            //@ts-ignore
+                            navigation.navigate('Profile' as never, {worker: worker} )
+                            
                         }}>
                             <View style={styles.callout}>
                             {/* @ts-ignore */}
@@ -96,7 +97,7 @@ export function Home (){
                             {/* @ts-ignore */}
                             <Text style={styles.devBio}>{worker.bio}</Text>
                             {/* @ts-ignore */}
-                            <Text style={styles.devTechs}>{worker.skills}</Text>
+                            <Text style={styles.workerSkills}>{worker.skills}</Text>
                             </View>
                         </Callout>
                     </Marker>
@@ -133,7 +134,7 @@ const styles = StyleSheet.create({
     avatar: {
         width:54,
         height:54,
-        borderRadius:4,
+        borderRadius:50,
         borderWidth:2,
         borderColor:'#fff',
     },
@@ -148,8 +149,9 @@ const styles = StyleSheet.create({
         color:'#666',
         marginTop:5,
     },
-    devTechs:{
+    workerSkills:{
         marginTop:5,
+        fontWeight:'bold',
     },
     searchForm: {
         position:"absolute",
