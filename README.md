@@ -1,12 +1,10 @@
 <h1>Seu Marido de Aluguel</h1>
 <h3>Integrantes</h3>
 
-<span>
-Gabriel Roberto de Souza Pereira, RA: 210542, PA038TIN3
-Pedro Henrique Garcia Silveira, RA: 191046, CP110TIN2, PA038TIN1
-Rafael Oliveira Silva, RA: 190348, CP110TIN2, PA038TIN3
-Vitor Lara dos Santos, RA: 180287, CP110TIN2, PA038TIN01
-</span>
+- Rafael Oliveira Silva | RA: 190348 | CP110TIN2, PA038TIN3
+- Gabriel Roberto de Souza Pereira | RA: 210542 | PA038TIN3
+- Pedro Henrique Garcia Silveira | RA: 191046 | CP110TIN2, PA038TIN1
+- Vitor Lara dos Santos | RA: 180287 | CP110TIN2, PA038TIN01
 
 <h3>Introdução</h3>
 
