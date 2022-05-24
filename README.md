@@ -9,8 +9,9 @@
 <h3>Introdução</h3>
 
 <span>A aplicação tem por finalidade unir pessoas que precisam de serviços, com pessoas que são qualificadas e querem trabalhar.
-Dessa forma, é possível que o solicitante visualize o perfil do trabalhador onde serão exibidas fotos de trabalhos anteriores, de forma que possa decidir da melhor forma possível se efetuará a solicitação de serviço.
-Além disso, existirá uma tabela com os horários disponíveis do trabalhador, aumentando a flexibilidade e aumentando a variedade de opções para ambos, solicitante e trabalhador.  
+Solicitantes à procura de trabalhadores poderam fazer uma pesquisa por especialidade, filtrando apenas os trabalhadores que tem a qualificação desejada.
+Após isso, é possível que o solicitante visualize o perfil do trabalhador, onde serão exibidas informações e fotos de trabalhos anteriores, facilitando a decisão de efetuar a solicitação de serviço, ou não.
+Além disso, existirá uma tabela com os horários disponíveis do trabalhador, aumentando a flexibilidade e variedade de opções para ambos, solicitante e trabalhador.  
 </span>
 
 <h3>Instalações necessárias</h3>
