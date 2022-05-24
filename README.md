@@ -41,15 +41,19 @@ npm install --global expo-cli # Instala o Expo
 yarn # Instala as dependências
 yarn start # Inicializa o expo
 ```
-<h6>Screenshots</h6>
-</br>
+<h3>Screenshots</h3>
 
-<p aling="center">
-<img src="https://github.com/rafaelos-git/Facens.PAVII.SeuMaridoDeAluguel.Front/tree/master/assets/screenshots/login-screen.png" />
-<img src="https://github.com/rafaelos-git/Facens.PAVII.SeuMaridoDeAluguel.Front/tree/master/assets/screenshots/map-screen.png"/>
-<img src="https://github.com/rafaelos-git/Facens.PAVII.SeuMaridoDeAluguel.Front/tree/master/assets/screenshots/perfil-screen.png"/>
+<h6>Login</h6>
 
-</p>
+![Screenshot](assets/screenshots/login-screen.png)
+
+<h6>Mapa</h6>
+
+![Screenshot](assets/screenshots/map-screen.png)
+
+<h6>Perfil</h6>
+
+![Screenshot](assets/screenshots/perfil-screen.png)
 
 <h3>Ferramentas Utilizadas:</h3>
 <ul>
