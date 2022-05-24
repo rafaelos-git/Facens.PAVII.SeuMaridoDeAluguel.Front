@@ -8,6 +8,8 @@ Rafael Oliveira Silva, RA: 190348, CP110TIN2, PA038TIN3
 Vitor Lara dos Santos, RA: 180287, CP110TIN2, PA038TIN01
 </span>
 
+<h3>Introdução</h3>
+
 <span>A aplicação tem por finalidade unir pessoas que precisam de serviços, com pessoas que são qualificadas e querem trabalhar.
 Dessa forma, é possível que o solicitante visualize o perfil do trabalhador onde serão exibidas fotos de trabalhos anteriores, de forma que possa decidir da melhor forma possível se efetuará a solicitação de serviço.
 Além disso, existirá uma tabela com os horários disponíveis do trabalhador, aumentando a flexibilidade e aumentando a variedade de opções para ambos, solicitante e trabalhador.  
@@ -43,9 +45,9 @@ yarn start # Inicializa o expo
 </br>
 
 <p aling="center">
-<img src="https://github.com/rafaelos-git/Facens.PAVII.SeuMaridoDeAluguel.Front/assets/login-screen.png" />
-<img src="https://github.com/rafaelos-git/Facens.PAVII.SeuMaridoDeAluguel.Front/assets/screenshots/map-screen.png"/>
-<img src="https://github.com/rafaelos-git/Facens.PAVII.SeuMaridoDeAluguel.Front/assets/screenshots/perfil-screen.png"/>
+<img src="https://github.com/rafaelos-git/Facens.PAVII.SeuMaridoDeAluguel.Front/tree/master/assets/screenshots/login-screen.png" />
+<img src="https://github.com/rafaelos-git/Facens.PAVII.SeuMaridoDeAluguel.Front/tree/master/assets/screenshots/map-screen.png"/>
+<img src="https://github.com/rafaelos-git/Facens.PAVII.SeuMaridoDeAluguel.Front/tree/master/assets/screenshots/perfil-screen.png"/>
 
 </p>
 
