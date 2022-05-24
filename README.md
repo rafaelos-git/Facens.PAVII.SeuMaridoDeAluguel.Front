@@ -33,12 +33,20 @@ npm install --global yarn # Instala o Yarn
 npm install --global expo-cli # Instala o Expo
 ```
 
-<h3>Iniciando a aplicação:</h3>
+<h3>Iniciando a aplicação</h3>
 
 ```
 yarn # Instala as dependências
 yarn start # Inicializa o expo
 ```
+
+<h3>Credenciais para login</h3>
+
+```
+admin@sma.com # Email
+admin # Password
+```
+
 <h3>Screenshots</h3>
 
 <h6>Login</h6>
