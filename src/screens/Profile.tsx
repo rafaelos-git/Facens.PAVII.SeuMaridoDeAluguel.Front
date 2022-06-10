@@ -14,7 +14,7 @@ export function Profile() {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.backBar}>
-        <BackButton back='Home' color='preto'/>
+        <BackButton back='Home' params={null} color='preto'/>
       </View>
       <View style={styles.perfilContainer}>
         <View style={styles.nameBar}>
@@ -46,7 +46,8 @@ export function Profile() {
           <Image style={styles.imgExperiences} source={route.params.worker.pictures[3]}/>
         </View>
         <View style={styles.serviceBar}>
-          <TouchableOpacity style={styles.button}>
+          {/* @ts-ignore */}
+          <TouchableOpacity style={styles.button} onPress={() => { navigation.navigate('Schedule' as never, {worker: route.params.worker})}}>
             <Text style={styles.buttonText}>Solicitar Serviço</Text>
           </TouchableOpacity>
         </View>

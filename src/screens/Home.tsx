@@ -3,12 +3,13 @@ import { StyleSheet, Image, View, Text, TextInput, TouchableOpacity, Keyboard, S
 import { MaterialIcons } from '@expo/vector-icons'
 import MapView, {Marker, Callout} from 'react-native-maps';
 import { requestForegroundPermissionsAsync, getCurrentPositionAsync } from 'expo-location'
-import { useNavigation } from '@react-navigation/native';
+import { useNavigation, useRoute } from '@react-navigation/native';
 
 import workersCadastred from '../utils/workers'
 
 export function Home (){
     const navigation = useNavigation()
+    const route = useRoute()
     const [workers, setWorkers] = useState([])
     const [currentRegion, setCurrentRegion] = useState(null); // Sem região inicial
     const [skills, setSkills] = useState('');
@@ -41,13 +42,36 @@ export function Home (){
     }, [])
 
     function loadWorkers(){
-        const searchedSkillsWorker: any = []
+        var searchedSkillsWorker: any = []
 
         workersCadastred.map((item, index) => {
             if (item.skills.includes(skills)) {
                 searchedSkillsWorker.push(item)
             }
         })
+
+        // if (!route.params) {
+        //     workersCadastred.map((item, index) => {
+        //         if (item.skills.includes(skills)) {
+        //             searchedSkillsWorker.push(item)
+        //         }
+        //     })
+        // } else {
+        //     workersCadastred.map((item, index) => {
+        //         //@ts-ignore
+        //         if (item.id != route.params.worker.id) {
+        //             if (item.skills.includes(skills)) {
+        //                 searchedSkillsWorker.push(item)
+        //             }
+        //         }
+        //         //@ts-ignore
+        //         if ((route.params.worker.skills).includes(skills)) {
+        //             //@ts-ignore
+        //             searchedSkillsWorker.push(route.params.worker)
+        //         }
+        //     })
+        // }
+
     
         Keyboard.dismiss()
     

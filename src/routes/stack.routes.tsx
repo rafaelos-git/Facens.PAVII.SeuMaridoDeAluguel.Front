@@ -5,6 +5,7 @@ import colors from "../styles/colors"
 import { Auth } from '../screens/Auth'
 import { Home } from '../screens/Home'
 import { Profile } from "../screens/Profile"
+import { Schedule } from '../screens/Schedule'
 
 const stackRoutes = createStackNavigator()
 
@@ -28,6 +29,10 @@ const AppRoutes: React.FC = () => (
         <stackRoutes.Screen
             name="Profile"
             component={Profile}
+        />
+        <stackRoutes.Screen
+            name="Schedule"
+            component={Schedule}
         />
     </stackRoutes.Navigator>
 )

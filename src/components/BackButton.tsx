@@ -8,14 +8,15 @@ import { StyleSheet, TouchableOpacityProps } from 'react-native'
 
 interface BackButtonProps extends TouchableOpacityProps {
     back: string,
+    params: any,
     color: string
 }
 
-export function BackButton({back, color, ...rest}: BackButtonProps) {
+export function BackButton({back, params, color, ...rest}: BackButtonProps) {
     const navigation = useNavigation()
     return(
         //@ts-ignore
-        <TouchableOpacity onPress={(back != 'Back') ? () => navigation.navigate(back) : () => navigation.goBack()}>
+        <TouchableOpacity onPress={(back != 'Profile') ? () => navigation.navigate(back) : () => navigation.navigate(back, {worker: params})}>
             <Ionicons name="ios-chevron-back-sharp" color={(color === 'branco') ? colors.white : '#000'} size={30} />
         </TouchableOpacity>
     )
