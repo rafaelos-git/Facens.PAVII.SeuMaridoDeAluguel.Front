@@ -14,8 +14,8 @@ Após isso, é possível que o solicitante visualize o perfil do trabalhador, on
 Além disso, existirá uma tabela com os horários disponíveis do trabalhador, aumentando a flexibilidade e variedade de opções para ambos, solicitante e trabalhador.  
 </span>
 
-<h3>Instalações necessárias</h3>
-<h6>Node</h6>
+<h3>Instalações necessárias (Comandos para Sistema Operacional LINUX)</h3>
+<h6>Node (Sujeito a alterações dependendo de qual LINUX está sendo utilizado)</h6>
 
 ```
 sudo apt install nodejs -y # Instala o NodeJS
@@ -61,6 +61,14 @@ admin # Password
 <h6>Perfil</h6>
 
 ![Screenshot](assets/screenshots/perfil-screen.png)
+
+<h6>Agendamento de horário</h6>
+
+![Screenshot](assets/screenshots/agendamento-screen.png)
+
+<h6>Confirmação de agendamento</h6>
+
+![Screenshot](assets/screenshots/confirm-modal.png)
 
 <h3>Ferramentas Utilizadas:</h3>
 <ul>
